@@ -1,2 +1,16 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+
+<div class="alert alert-success" role="alert">
+  There are <b><i><%= @products %></b></i> products in our store
+</div>
+
+<div class="alert alert-info" role="alert">
+  There are <b><i><%= @categories_count %></b></i> categories of products in our store:</p>
+</div>
+
+<% @categories.each do |category| %>
+  <li class="list-group-item list-group-item-info"> <b><i><%= category.name%></b></i> </li>
+<% end %>
+
+
+
