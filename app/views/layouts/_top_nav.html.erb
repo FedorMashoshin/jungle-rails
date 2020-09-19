@@ -28,6 +28,7 @@
         <li>
         <li><%= link_to 'About', 'about' %></li>
         </li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
        <li class="dropdown">
@@ -42,11 +43,32 @@
             <li><%= link_to 'Categories',  [:admin, :categories] %></li>
           </ul>
         </li>
+
+      
+       
+
         <li>
           <%= link_to cart_path do %>
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
         </li>
+
+        <% if current_user %>
+        <li>
+          <a><%= current_user.name %> </a>  
+        </li>
+        <li>
+        <a  href="/logout">Log out</a>
+        </li>
+
+        <% else %>
+        <li>
+        <a  href="/login">Login</a>
+        </li>
+        <li>
+        <a  href="/signup">Sign Up</a>
+        </li>
+        <% end %>
       </ul>
     </div>
   </div>
