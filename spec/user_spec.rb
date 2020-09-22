@@ -51,7 +51,7 @@ RSpec.describe User, type: :model do
 
     it "should return false if there is no last name" do
       @user = User.create(
-        first_name: "tester", 
+        first_name: "alexa", 
         last_name: nil, 
         email:"alexa1@test.com",
         password:"12345",
