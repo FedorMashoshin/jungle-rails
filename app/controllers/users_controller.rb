@@ -3,10 +3,7 @@ class UsersController < ApplicationController
   end
   def create
     # user_params[:email] = user_params[:email].downcase.strip
-    puts " Hi this funct"
-    puts user_params
     @user = User.new(user_params)
-    puts "Helloe #{@user}"
     if @user.save
       session[:user_id] = @user.id
       redirect_to '/'
